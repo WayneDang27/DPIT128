@@ -5,7 +5,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>DPIT128: Assignment 2 (Task ?)</title>
+    <title>DPIT128: Assignment 2 (Task 2)</title>
     <style>
       /* BEGIN: Template CSS (DO NOT ALTER/REMOVE) ----------- */
 
@@ -60,36 +60,15 @@
       /* END: Template CSS (DO NOT ALTER/REMOVE) ------------- */
 
       /* INSERT INTERNAL CSS HERE */
-      /*Apply arial font and 14px font size to the main div element.*/
+
+      /*An arial font and 14px font size are applied to the main div element.*/
       div {
-        font-family: Arial;
+        font-family: arial;
         font-size: 14px;
       }
-      /* apply 20px margin */
-      .m-20px {
+      /* apply 20px to the image and control/widget sections of the form. */
+      .margin{
         margin: 20px;
-      }
-      /* apply background color, padding and border for input text, submit, reset button and divs that have class = round*/
-      input[type="text"],
-      button[type="submit"],
-      button[type="reset"],
-      div[class="round"] {
-        background-color: #fffff9;
-        padding: 5px;
-        border: 1px dotted #404040;
-      }
-      /* apply airal font and font size for input element  */
-      input {
-        font-family: arial;
-        font-size: 13px;
-      }
-
-      .round {
-        border-radius: 5px;
-      }
-      /* display pointer cursor when button is hovered  */
-      button:hover {
-        cursor: pointer;
       }
     </style>
   </head>
@@ -109,52 +88,43 @@
       </a>
     </p>
     <hr />
-    <h2>Task 1</h2>
+    <h2>Task 2</h2>
 
-    <!-- BEGIN: Task 1 Solution -->
-
-    <div
-      class="round container"
-      style="
-        background-color: #ffffff;
-        width: 625px;
-        margin: auto;
-        padding: 20px;
-      "
-    >
-      <!-- adjust image size -->
-      <img
-        alt="Logo Youtube"
-        src="https://mywebspace.net.au/UOWC128/assignment_2/images/task_1.png"
-        style="width: 200px; display: block; margin-bottom: 40px"
+    <!-- BEGIN: Task 2 Solution -->
+    <!-- apply border, box shadow and margin  -->
+    <div class="container" style="background-color: #eaeff6">
+      <img class="margin"
+        src="https://mywebspace.net.au/UOWC128/assignment_2/images/task_2.png"
+        style="width: 200px; display: block;"
+        
       />
-
-      <!-- display all results in a new window/tab by using target attribute -->
-      <!-- New open tab will go to the url is defined in action attribute
-      this url will be appended ?search_query=key-word
-      because this form has get method -->
-      <form
-        action="https://www.youtube.com/results"
-        method="get"
-        target="_blank"
-        class="m-20px"
-      >
-        <label class="field-label" for="key-word"> Search Terms: </label>
-        <input
-          type="text"
-          required
-          class="round"
-          placeholder="Please enter search terms here..."
-          style="width: 350px"
-          name="search_query"
-          id="key-word"
-        />
-        <button type="submit" class="m=20px round">Submit</button>
-        <button type="reset" class="m=20px round">Reset</button>
+      <!-- display all results in a new window/tab. -->
+      <form class="margin" target="_blank" >
+        <div>
+          <label class="margin"> Search Terms: </label>
+          <input placeholder="Please enter search terms here..." />
+          <button class="margin" type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+        <div>
+          <input name="results" type="radio" id="all" checked />
+          <label for="all"> Show results for all categories </label>
+        </div>
+        <div>
+          <input name="results" type="radio" id="Videos" />
+          <label for="Videos"> Show results for Videos only </label>
+        </div>
+        <div>
+          <input name="results" type="radio" id="Images" />
+          <label for="Images"> Show results for Images only </label>
+        </div>
+        <div>
+          <input name="results" type="radio" id="News" />
+          <label for="News"> Show results for News only </label>
+        </div>
       </form>
     </div>
-
-    <!-- END: Task 1 Solution -->
+    <!-- END: Task 2 Solution -->
 
     <p>&copy; DANG BAO NGUYEN</p>
   </body>
