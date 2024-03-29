@@ -82,6 +82,7 @@
       .round {
         border-radius: 5px;
       }
+      button:hover{cursor: pointer;}
     </style>
   </head>
   <body>
@@ -108,7 +109,7 @@
       class="round container"
       style="
         background-color: #ffffff;
-        width: 615px;
+        width: 625px;
         margin: auto;
         padding: 20px;
       "
@@ -124,7 +125,7 @@
         method="get"
         target="_blank"
       >
-        <label class="field-label"> Search Terms: </label>
+        <label class="field-label" for="key-word"> Search Terms: </label>
         <input
           type="text"
           required
@@ -132,6 +133,7 @@
           placeholder="Please enter search terms here..."
           style="width: 350px"
           name="search_query"
+          id="key-word"
         />
         <button type="submit" class="mr-20px round">Submit</button>
         <button type="reset" class="round">Reset</button>
